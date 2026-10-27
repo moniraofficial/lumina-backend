@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "prisma skills sync || exit 0"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "@types/node": "^26.6.5",
     "prisma": "^8.0.0-rc.27",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^6.0.3"
   }
 }
